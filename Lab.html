@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Windows</title>
+</head>
+
+<body>
+    <script>
+        // First pop-up window to get the user's name
+        var firstInput = parseFloat(window.prompt("Please enter the 1st number:"));
+
+        // Second pop-up window to get the user's age
+        var secondInput = parseFloat(window.prompt("Please enter the 2nd number:"));
+
+        // Compare inputs and change background color
+        if (isNaN(firstInput) || isNaN(secondInput)) {
+            alert("Invalid input. Please enter valid numbers.");
+        } else if (firstInput > secondInput) {
+            document.body.style.backgroundColor = 'lightblue';
+            document.writeln(firstInput+'>' +secondInput);
+        } else if (secondInput > firstInput) {
+            document.body.style.backgroundColor = 'orange';
+            document.writeln(secondInput+'>' +firstInput);
+        } else {
+            document.body.style.backgroundColor = 'lightyellow';
+            document.writeln(secondInput+'==' +firstInput);;
+        }
+    </script>
+    <button botton1 onclick="alert(firstInput);">1st Button</button>
+    <button botton2 onclick="alert(secondInput);">2rd Button</button>
+
+</body>
+
+</html>
